@@ -13,6 +13,7 @@ interface Transaction {
 
 interface TransactionContextType {
   transactions: Transaction[];
+  loadTransactions: (q: string) => Promise<void>;
 }
 
 interface TransactionsProviderProps {
@@ -24,17 +25,21 @@ export const TransactionsContext = createContext({} as TransactionContextType);
 export function TransactionsProvider({ children }: TransactionsProviderProps) {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
 
-  useEffect(() => {
-    async function loadTransactions() {
-      const response = await api.get("/transactions");
-      setTransactions(response.data);
-    }
+  async function loadTransactions(query?: string) {
+    const response = await api.get("/transactions", {
+      params: {
+        q: query,
+      },
+    });
+    setTransactions(response.data);
+  }
 
+  useEffect(() => {
     loadTransactions();
   }, []);
 
   return (
-    <TransactionsContext.Provider value={{ transactions }}>
+    <TransactionsContext.Provider value={{ transactions, loadTransactions }}>
       {children}
     </TransactionsContext.Provider>
   );
