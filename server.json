@@ -9,36 +9,28 @@
       "createdAt": "2023-05-02T14:51:44.583Z"
     },
     {
-      "id": 2,
-      "description": "Lanche",
+      "description": "Parcela da Faculdade",
+      "price": 1200,
+      "category": "Estudos",
       "type": "outcome",
-      "category": "FastFood",
-      "price": 75,
-      "createdAt": "2023-05-02T14:51:44.583Z"
+      "createdAt": "2023-05-05T11:19:11.386Z",
+      "id": 2
     },
     {
-      "description": "Teste",
-      "price": 12,
-      "category": "Teste",
+      "description": "Freela, script para banco de dados",
+      "price": 2500,
+      "category": "Freelancer",
       "type": "income",
-      "createdAt": "2023-05-05T10:53:44.308Z",
+      "createdAt": "2023-05-05T11:19:39.929Z",
       "id": 3
     },
     {
-      "description": "Aula de Natação",
-      "price": 190,
-      "category": "Bem Estar",
+      "description": "Pizza",
+      "price": 85,
+      "category": "FastFood",
       "type": "outcome",
-      "createdAt": "2023-05-05T11:08:48.369Z",
+      "createdAt": "2023-05-05T11:20:13.774Z",
       "id": 4
-    },
-    {
-      "description": "Alexa",
-      "price": 547,
-      "category": "Eletronico",
-      "type": "outcome",
-      "createdAt": "2023-05-05T11:09:13.805Z",
-      "id": 5
     }
   ]
 }
