@@ -11,7 +11,7 @@ import {
   TransactionTypeButton,
 } from "./styles";
 import { Controller, useForm } from "react-hook-form";
-import { useContext, useTransition } from "react";
+import { useContext } from "react";
 import { TransactionsContext } from "../../contexts/TransactionsContext";
 
 const newTransactionFormSchema = z.object({
